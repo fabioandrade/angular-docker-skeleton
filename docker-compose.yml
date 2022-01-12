@@ -3,9 +3,9 @@ version: "3"
 services: 
     angular_web:
         build: .
-        image: angular_web
+        image: mc-angular-web
         mem_limit: 4096M
-        container_name: angular_web
+        container_name: mc-angular-web
         entrypoint: ./.docker-entrypoint.sh
         volumes: 
           - .:/var/www
@@ -18,4 +18,4 @@ services:
 networks:
   app-network:
     external:
-      name: backend_app-network
+      name: mc-laravel_app-network
