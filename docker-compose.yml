@@ -1,0 +1,21 @@
+version: "3"
+
+services: 
+    angular_web:
+        build: .
+        image: angular_web
+        mem_limit: 4096M
+        container_name: angular_web
+        entrypoint: ./.docker-entrypoint.sh
+        volumes: 
+          - .:/var/www
+        ports:
+          - "4200:4200"
+        tty: true  
+        networks:   
+          - app-network
+
+networks:
+  app-network:
+    external:
+      name: backend_app-network

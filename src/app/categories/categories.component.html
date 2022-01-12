@@ -1,0 +1,20 @@
+<p>Lista de Categorias (retorno do backend)</p>
+
+<div class='panel-body'>  
+    <div class='table-responsive'>  
+        <table class='table'>  
+            <thead>  
+                <tr>  
+                    <th>Código</th>  
+                    <th>Categoria</th>  
+                </tr>  
+            </thead>  
+            <tbody>  
+                <tr *ngFor="let category of categoriesList;">  
+                    <td>{{category.id}}</td>  
+                    <td>{{category.no_category}}</td>    
+                </tr>  
+            </tbody>  
+        </table>  
+    </div>  
+</div>  
